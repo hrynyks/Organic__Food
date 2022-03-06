@@ -1,0 +1,125 @@
+.about {
+    padding: 96px 0 150px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        @include a (laptop) {
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        max-width: 640px;
+        width: 100%;
+
+        @include a (laptop) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-family: 'Rosario', sans-serif;
+        font-size: toRem(70);
+        line-height: 90px;
+        margin-bottom: 30px;
+
+        @include a (laptop) {
+            text-align: center;
+        }
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        line-height: 30px;
+        color: $medium-color;
+        max-width: 587px;
+        width: 100%;
+        margin-bottom: 40px;
+
+        @include a (laptop) {
+            text-align: center;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 500px;
+        width: 100%;
+
+        @include a (mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+
+            @include a (mobile) {
+                align-items: center;
+            }
+        }
+    }
+
+    &__name {
+        font-size: toRem(30);
+        font-weight: 500;
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 27px;
+    }
+
+    &__btn {
+        &-left {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid #CCCCCC;
+        }
+
+        &-right {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: $accent-color;
+        }
+    }
+
+    &__image {
+        position: relative;
+
+        @include a (laptop) {
+            display: none;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: 25px;
+        left: 5px;
+
+        @include a (laptop) {
+            display: none;
+        }
+    }
+}

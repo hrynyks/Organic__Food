@@ -1,0 +1,92 @@
+.hero {
+    padding: 50px 0 50px;
+    position: relative;
+
+    &__title {
+        font-family: 'Rosario', sans-serif;
+        font-size: toRem(70);
+        line-height: 90px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        line-height: 30px;
+        color: $medium-color;
+        text-align: center;
+        max-width: 637px;
+        width: 100%;
+        margin: 0 auto 57px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__btn {
+        &-left {
+            font-size: toRem(18);
+            font-weight: 500;
+            color: $dark-color;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+
+        &-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 64px;
+            height: 64px;
+            background-color: $accent-color;
+            border-radius: 50%;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+        }
+    }
+
+    // &__image {
+    //     @include a (mobile) {
+    //         display: none;
+    //     }
+    // }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include a (tablet-xl) {
+            flex-direction: row;
+        }
+
+        @include a (mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 40px;
+        top: 0;
+        z-index: -1;
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+}

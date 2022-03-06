@@ -1,0 +1,90 @@
+.way {
+    padding-bottom: 147px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+
+        @include a (laptop) {
+            justify-content: center;
+        }
+    }
+
+    &__image {
+        position: relative;
+        z-index: 1;
+
+        @include a (laptop) {
+            display: none;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: -30px;
+        top: 30px;
+        z-index: -1;
+
+        @include a (laptop) {
+            display: none;
+        }
+    }
+
+    &__content {
+        max-width: 650px;
+        width: 100%;
+
+        @include a (laptop) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__btn {
+        font-size: toRem(18);
+        color: $dark-color;
+        width: 170px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #F3FBF8;
+        border-radius: 50px;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        font-family: 'Rosario', sans-serif;
+        font-size: toRem(70);
+        line-height: 90px;
+        margin-bottom: 20px;
+
+        @include a (laptop) {
+            text-align: center;
+        }
+
+        @include a (mobile) {
+            line-height: 60px;
+        }
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        line-height: 30px;
+        caret-color: $medium-color;
+        max-width: 575px;
+        width: 100%;
+        margin-bottom: 50px;
+
+        @include a (laptop) {
+            text-align: center;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+}

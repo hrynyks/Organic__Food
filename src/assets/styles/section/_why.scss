@@ -1,0 +1,86 @@
+.why {
+    padding: 100px 0;
+    position: relative;
+
+    &__title {
+        font-family: 'Rosario', sans-serif;
+        font-size: toRem(70);
+        line-height: 90px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        line-height: 30px;
+        color: $medium-color;
+        max-width: 637px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto 57px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item {
+        max-width: 500px;
+        width: 100%;
+        padding: 41px 59px;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+
+        &:hover {
+            background-color: #F3FBF8;
+        }
+
+        &-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            background-color: #F3FBF8;
+            border-radius: 50%;
+        }
+
+        &-title {
+            font-size: toRem(20);
+            margin-bottom: 8px;
+        }
+
+        &-descr {
+            font-size: toRem(14);
+            line-height: 20px;
+            color: $medium-color;
+        }
+    }
+
+    &__images {
+        position: relative;
+    }
+
+    &__circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &__semi-circle {
+        position: absolute;
+    }
+}
